@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.wallet-container {
+    background-color: #dcdcdc;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+
+    .card-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        background: transparent;
+        border-radius: 12px;
+
+        .card {
+            background: #f8f8f8;
+            padding: 16px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h3 {
+                font-size: 14px;
+                color: #666;
+                margin-bottom: 6px;
+            }
+
+            .balance {
+                font-size: 20px;
+                font-weight: bold;
+                color: #111;
+            }
+
+            .sub-text {
+                font-size: 12px;
+                color: #888;
+            }
+
+            &.no-payment {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+
+                .check-icon {
+                    font-size: 22px;
+                    font-weight: bold;
+                    color: #000;
+                    position: absolute;
+                    right: 10px;
+                    bottom: 10px;
+                }
+            }
+
+            &.full-width {
+                grid-column: span 2;
+                text-align: left;
+
+                .points {
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #111;
+                }
+            }
+        }
+    }
+
+    h3 {
+        font-size: 16px;
+        color: #555;
+    }
+
+    p {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 5px 0;
+    }
+
+    span {
+        font-size: 14px;
+        color: gray;
+    }
+}
+
+.transaction-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+
+    .transaction-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 15px;
+        background: white;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        .transaction-icon {
+            font-size: 24px;
+            color: #555;
+        }
+
+        .transaction-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        div {
+            flex-grow: 1;
+
+            p {
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            span {
+                font-size: 14px;
+                color: gray;
+            }
+        }
+    }
+}
+
+.transaction-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fff;
+    padding: 16px;
+
+    .transaction-detail-not-found {
+        text-align: center;
+        color: #6b7280;
+        margin-top: 40px;
+    }
+
+    .transaction-detail-back {
+        margin-top: 16px;
+        color: #3b82f6;
+        font-size: 14px;
+        text-decoration: none;
+        display: flex;
+    }
+
+    .transaction-card {
+        width: 100%;
+        max-width: 400px;
+        background-color: #dcdcdc;
+        border-radius: 16px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 24px;
+        text-align: center;
+
+        .transaction-card-amount {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .transaction-card-name {
+            color: #6b7280;
+        }
+
+        .transaction-card-date {
+            color: #9ca3af;
+            font-size: 14px;
+        }
+    }
+
+    .transaction-status {
+        background-color: #fff;
+        padding: 12px;
+        margin-top: 16px;
+        border-radius: 8px;
+        font-size: 14px;
+        text-align: left;
+
+        .transaction-status-text {
+            font-weight: 600;
+        }
+
+        .transaction-status-approved {
+            color: #10b981;
+        }
+
+        .transaction-status-method {
+            color: #6b7280;
+            font-size: 12px;
+        }
+    }
+
+    .transaction-total {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 16px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+}
